@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <div><h1 id="title">♡ My Todo List</h1></div>
+          <div><p id="Description">Keep things simple.</p></div>
+        </div>
+      </header>
+      <main>
+        <section>
+          <div id="new-task">
+            <h2>Add a new task</h2>
+            <form id="task-form">
+              <div id="new-task-title">
+                <input type="text" placeholder="Task title" />
+              </div>
+              <div id="new-task-description">
+                <input type="text" placeholder="Description" />
+              </div>
+              <div id="task-details">
+                <input id="priority" type="number" placeholder="Priority" />
+                <input id="date" type="date" placeholder="Date" />
+              </div>
+              <div><button id="add-task">+ Add Task</button></div>
+            </form>
+          </div>
+        </section>
+        <div><h2 id="my-tasks">My Tasks</h2></div>
+        <section>
+          <form id="filter-form">
+            <div id="tasks-filter">
+              <input
+                id="Priority-filter"
+                type="number"
+                placeholder="Priority filter"
+              />
+              <input id="date-filter" type="date" placeholder="Date filter" />
+            </div>
+          </form>
+        </section>
+        <section>
+          <div class="task-list">
+            <div class="task">
+              <div class="task-info">
+                <h3>Learn JavaScript</h3>
+                <p>Practice arrays and functions</p>
+              </div>
+              <div class="task-actions">
+                <span>2026-10-20</span>
+                <span class="priority">1</span>
+                <button>Edit</button>
+                <button>Delete</button>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task-info">
+                <h3>Read a Book</h3>
+                <p>Read 20 pages of a novel</p>
+              </div>
+              <div class="task-actions">
+                <span>2026-10-22</span>
+                <span class="priority">3</span>
+                <button>Edit</button>
+                <button>Delete</button>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task-info">
+                <h3>Exercise</h3>
+                <p>Do a 30-minute home workout</p>
+              </div>
+              <div class="task-actions">
+                <span>2026-10-20</span>
+                <span class="priority">2</span>
+                <button>Edit</button>
+                <button>Delete</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./javaScript.js"></script>
+  </body>
+</html>
