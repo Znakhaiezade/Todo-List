@@ -1,17 +1,19 @@
 "use strict";
+const taskForm = document.querySelector("#task-form");
+const taskTitle = document.querySelector("#task-title");
+const taskDescription = document.querySelector("#task-description");
+const taskPriority = document.querySelector("#task-priority");
+const taskDate = document.querySelector("#task-date");
+const taskList = document.querySelector(".task-list");
+const addBtn = document.querySelector("#add-btn");
+const title = document.querySelector(".title");
+const description = document.querySelector(".Description");
+const priority = document.querySelector(".priority");
+const date = document.querySelector(".date");
 
-const taskList = [];
-
-const taskTitle = document.getElementById("task-title").value;
-const taskDescription = document.getElementById("task-description").value;
-const taskPriority = document.getElementById("priority").value;
-const taskDate = document.getElementById("date").value;
-
-const newTask = {
-    title: taskTitle,
-    description: taskDescription,
-    priority: taskPriority,
-    date: taskDate
-};
-
-taskList.push(newTask);
+addBtn.addEventListener("click", function () {
+  taskTitle.value = title;
+  taskDescription.value = description;
+  taskPriority.value = priority;
+  taskDate.value = date;
+});

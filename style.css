@@ -1,16 +1,16 @@
- @font-face {
+@font-face {
   font-family: "Sniglet";
   src: url("fonts/Sniglet-Regular.ttf") format("truetype");
 }
 
-:root{
+:root {
   --main-font: "Sniglet";
   --bg-color: #ded2ec;
   --card-color: #f2eef5;
   --text-color: #625079;
-  --muted-color: #9A88AA;
+  --muted-color: #9a88aa;
   --border-color: #50425c;
-  --medium-color: #88799A;
+  --medium-color: #88799a;
   --low-color: #e7dff0;
 }
 
@@ -18,19 +18,18 @@
   box-sizing: border-box;
 }
 
-
-body{
-    background-color: var(--bg-color);
-    font-family: var(--main-font);
-    color: var(--text-color);
+body {
+  background-color: var(--bg-color);
+  font-family: var(--main-font);
+  color: var(--text-color);
 }
 
-.container{
+.container {
   width: min(100% - 32px, 1000px);
   margin-inline: auto;
 }
 
-input{
+input {
   border: none;
   background-color: var(--card-color);
   border: 0.25px solid var(--border-color);
@@ -42,36 +41,38 @@ input{
   height: 40px;
 }
 
-
-#title, #Description {
+#title,
+#Description {
   margin: 10px 20px;
 }
 
-#new-task{
+#new-task {
   padding: 15px 20px;
   background-color: var(--card-color);
   border: 0.25px solid var(--border-color);
   border-radius: 6px;
 }
 
-#task-details, #tasks-filter{
+#task-details,
+#tasks-filter {
   display: flex;
   gap: 10px;
 }
 
-#task-details, #tasks-filter input{
-    flex: 1;
+#task-details,
+#tasks-filter input {
+  flex: 1;
   min-width: 0;
 }
 
-
-#new-task-description, #new-task-title{
+#new-task-description,
+#new-task-title {
   display: flex;
 }
 
-#add-task{
-    width: 100%;
-  background-color: #A789C5;
+#add-btn {
+  width: 100%;
+  background-color: #a789c5;
   color: white;
   border: none;
   border-radius: 6px;
@@ -81,15 +82,16 @@ input{
   cursor: pointer;
 }
 
-#add-task:hover {
-  background-color: #9272B2;
+#add-btn:hover {
+  background-color: #9272b2;
 }
 
-#Priority-filter, #date-filter{
+#Priority-filter,
+#date-filter {
   background-color: var(--low-color);
 }
 
-#my-tasks{
+#my-tasks {
   font-size: 24px;
   color: var(--text-color);
   margin-top: 30px;
@@ -143,7 +145,6 @@ input{
   background-color: var(--bg-color);
 }
 
-
 .task-info {
   text-align: left;
 }
@@ -164,8 +165,8 @@ input{
   gap: 10px;
 }
 
-.priority{
-  background-color: #F7E0E8;
+.priority {
+  background-color: #f7e0e8;
   padding: 5px 7px;
   border-radius: 6px;
   font-size: 12px;
@@ -178,7 +179,7 @@ input{
     gap: 0px;
   }
 
-   .task {
+  .task {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
