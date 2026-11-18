@@ -70,7 +70,7 @@ input {
   display: flex;
 }
 
-#add-btn {
+.add-btn {
   width: 100%;
   background-color: #a789c5;
   color: white;
@@ -82,7 +82,7 @@ input {
   cursor: pointer;
 }
 
-#add-btn:hover {
+.add-btn:hover {
   background-color: #9272b2;
 }
 
