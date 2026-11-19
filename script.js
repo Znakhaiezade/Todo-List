@@ -5,10 +5,9 @@ const priority = document.querySelector("#priority");
 const date = document.querySelector("#date");
 const taskList = document.querySelector(".task-list");
 const addBtn = document.querySelector(".add-btn");
-// let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-//ADD TASK
+//ADD TASK SECTION
 addBtn.addEventListener("click", function () {
   let task = {
     title: taskTitle.value,
@@ -18,41 +17,51 @@ addBtn.addEventListener("click", function () {
   };
   tasks.push(task);
 
-  //creat task
+  /////creat task
   let newTask = document.createElement("div");
   newTask.classList.add("task");
 
-  //creat title
+  /////creat title
   let newTitle = document.createElement("h3");
   newTitle.textContent = task.title;
 
-  //creat description
+  /////creat description
   let newDescription = document.createElement("p");
   newDescription.textContent = task.description;
 
-  //Task info
+  /////Task info
   let taskInfo = document.createElement("div");
   taskInfo.classList.add("task-info");
 
   taskInfo.appendChild(newTitle);
   taskInfo.appendChild(newDescription);
 
-  //creat date
+  /////creat date
   let newDate = document.createElement("span");
   newDate.classList.add("date");
   newDate.textContent = task.date;
 
-  //creat priority
+  /////creat priority
   let newPriority = document.createElement("span");
   newPriority.classList.add("priority");
   newPriority.textContent = task.priority;
 
-  //task action
+  //////Edit btn
+  let editBtn = document.createElement("button");
+  editBtn.textContent = "Edit";
+
+  /////Delete btn
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+
+  /////task action
   let taskActions = document.createElement("div");
   taskActions.classList.add("task-actions");
 
   taskActions.appendChild(newDate);
   taskActions.appendChild(newPriority);
+  taskActions.appendChild(editBtn);
+  taskActions.appendChild(deleteBtn);
 
   newTask.appendChild(taskInfo);
   newTask.appendChild(taskActions);
@@ -60,4 +69,36 @@ addBtn.addEventListener("click", function () {
   taskList.appendChild(newTask);
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  taskTitle.value = "";
+  taskDescription.value = "";
+  priority.value = "";
+  date.value = "";
 });
+
+//FILTER SECTION
+const priorityFilter = document.querySelector("#Priority-filter");
+const dateFilter = document.querySelector("#date-filter");
+
+priorityFilter.addEventListener("input", filterTasks);
+dateFilter.addEventListener("input", filterTasks);
+
+function filterTasks() {
+  const priorityFilterValue = priorityFilter.value;
+  const dateFilterValue = dateFilter.value;
+  const allTasks = document.querySelectorAll(".task");
+
+  for (let i = 0; i < allTasks.length; i++) {
+    const taskPriority = allTasks[i].querySelector(".priority").textContent;
+    const taskDate = allTasks[i].querySelector(".date").textContent;
+
+    if (
+      (priorityFilterValue === "" || priorityFilterValue === taskPriority) &&
+      (dateFilterValue === "" || dateFilterValue === taskDate)
+    ) {
+      allTasks[i].style.display = "flex";
+    } else {
+      allTasks[i].style.display = "none";
+    }
+  }
+}
