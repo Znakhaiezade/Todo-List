@@ -59,7 +59,7 @@ input {
   gap: 10px;
 }
 
-#task-details,
+#task-details input,
 #tasks-filter input {
   flex: 1;
   min-width: 0;
@@ -170,6 +170,66 @@ input {
   padding: 5px 7px;
   border-radius: 6px;
   font-size: 12px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(45, 35, 55, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.model-content {
+  width: min(100%, 420px);
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.model-content h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.model-content input {
+  margin-bottom: 0;
+}
+
+.model-content button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: var(--main-font);
+  cursor: pointer;
+  color: white;
+}
+
+#save-btn {
+  background-color: #a789c5;
+}
+
+#cancel-btn {
+  background-color: #9a88aa;
+}
+
+#save-btn:hover {
+  background-color: #9272b2;
+}
+
+#cancel-btn:hover {
+  background-color: #88799a;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 600px) {

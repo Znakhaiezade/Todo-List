@@ -51,45 +51,23 @@
           </form>
         </section>
         <section>
-          <div class="task-list">
-            <div class="task">
-              <div class="task-info">
-                <h3 class="title">Learn JavaScript</h3>
-                <p class="Description">Practice arrays and functions</p>
-              </div>
-              <div class="task-actions">
-                <span class="date">2026-10-20</span>
-                <span class="priority">1</span>
-                <button>Edit</button>
-                <button>Delete</button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="task-info">
-                <h3 class="title">Read a Book</h3>
-                <p class="Description">Read 20 pages of a novel</p>
-              </div>
-              <div class="task-actions">
-                <span class="date">2026-10-22</span>
-                <span class="priority">3</span>
-                <button>Edit</button>
-                <button>Delete</button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="task-info">
-                <h3 class="title">Exercise</h3>
-                <p class="Description">Do a 30-minute home workout</p>
-              </div>
-              <div class="task-actions">
-                <span class="date">2026-10-20</span>
-                <span class="priority">2</span>
-                <button>Edit</button>
-                <button>Delete</button>
-              </div>
-            </div>
-          </div>
+          <div class="task-list"></div>
         </section>
+        <div class="modal hidden">
+          <div class="model-content">
+            <h2>Edit Task</h2>
+            <input id="edit-title" type="text" placeholder="Task title" />
+            <input
+              id="edit-description"
+              type="text"
+              placeholder="Description"
+            />
+            <input id="edit-priority" type="number" placeholder="Priority" />
+            <input id="edit-date" type="date" />
+            <button id="save-btn" type="button">Save</button>
+            <button id="cancel-btn" type="button">Cancel</button>
+          </div>
+        </div>
       </main>
     </div>
 
